@@ -11,4 +11,9 @@ import org.junit.*
 @TestFor(PersonController)
 class PersonControllerTests {
 
+
+    public testSomething(){
+
+    }
+
 }
