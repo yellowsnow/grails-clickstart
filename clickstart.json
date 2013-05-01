@@ -1,0 +1,37 @@
+{
+    "id": "grails-clickstart",
+    "name": "Grails Skeleton Application",
+    "source": "git://github.com/CloudBees-community/grails-clickstart.git",
+    "description": "A Grails application, with a database and continuous deployment",
+    "doc-url": "https://github.com/CloudBees-community/grails-clickstart/blob/master/README.md",
+    "app-package": "http://repository-community.forge.cloudbees.com/snapshot/localdomain/localhost/grails-clickstart/0.1-SNAPSHOT/grails-clickstart-0.1-SNAPSHOT.war",
+    "icon": "https://raw.github.com/CloudBees-community/grails-clickstart/master/clickstart-icon.png",
+
+    "supported-by": "cloudbees",
+    "order": 1,
+
+
+    "runtime": {
+        "type": "tomcat",
+        "app-parameters" : {
+            "jvmPermSize": "256"
+        },
+        "app-variables": {
+            "grails.env": "production"
+        }
+    },
+    "databases": [
+        {
+            "type": "mysql",
+            "alias": "mydb"
+        }
+    ],
+    "build-with-jenkins": {
+        "plugins" : ["git", "grails"],
+        "template": {
+            "type": "https://raw.github.com/CloudBees-community/grails-clickstart/master/clickstart-jenkins.xml",
+            "options": {
+            }
+        }
+    }
+}
