@@ -12,7 +12,7 @@
 
 
     "runtime": {
-        "type": "tomcat",
+        "type": "tomcat7",
         "app-parameters" : {
             "jvmPermSize": "256"
         },
