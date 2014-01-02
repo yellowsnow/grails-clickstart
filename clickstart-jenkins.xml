@@ -23,14 +23,6 @@
                     <user>(jenkins)</user>
                     <account>${account}</account>
                 </com.cloudbees.plugins.deployer.impl.run.RunHostImpl>
-                <com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl plugin="cloudfoundry-deploy-engine@1.7">
-                    <targets class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
-                        <c class="list"/>
-                        <list reference="../c"/>
-                    </targets>
-                    <user>cleclerc@cloudbees.com</user>
-                    <cloud>https://api.cloudfoundry.com</cloud>
-                </com.cloudbees.plugins.deployer.impl.cloudfoundry.HostImpl>
             </hosts>
         </com.cloudbees.plugins.deployer.DeployNowJobProperty>
     </properties>
