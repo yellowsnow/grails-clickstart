@@ -12,7 +12,8 @@ import org.junit.*
 class PersonControllerTests {
 
 
-    public testSomething(){
+    @Test
+    public void testSomething(){
 
     }
 

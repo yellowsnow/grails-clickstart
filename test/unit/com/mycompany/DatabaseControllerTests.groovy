@@ -11,7 +11,8 @@ import org.junit.*
 @TestFor(DatabaseController)
 class DatabaseControllerTests {
 
-    public testSomething(){
+    @Test
+    public void testSomething(){
 
     }
 

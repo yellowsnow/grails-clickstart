@@ -11,7 +11,8 @@ import org.junit.*
 @TestFor(Person)
 class PersonTests {
 
-    public testSomething(){
+    @Test
+    public void testSomething(){
 
     }
 
