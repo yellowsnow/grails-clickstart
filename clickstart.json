@@ -14,7 +14,7 @@
     "runtime": {
         "type": "tomcat7",
         "app-parameters" : {
-            "jvmPermSize": "256"
+            "jvmPermSize": "200"
         },
         "app-variables": {
             "grails.env": "production"
