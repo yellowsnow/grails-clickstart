@@ -46,8 +46,23 @@ This binding injects in the container:
   * `DATABASE_URL_MYDB` starting with `mysql:` (e.g. "mysql://ec2-x-y-z-w.compute-1.amazonaws.com:3306/grails-clickstart")
   * `DATABASE_USERNAME_MYDB`
   * `DATABASE_PASSWORD_MYDB`
-we recommend you to use the JNDI datasource.
 
+We recommend you to use the JNDI datasource in `DataSource.groovy` (sample [here](https://github.com/CloudBees-community/grails-clickstart/blob/master/grails-app/conf/DataSource.groovy#L51)):
+
+```groovy
+ {
+    production {
+        // DEMO JNDI DATA SOURCE
+        dataSource {
+            dialect = 'org.hibernate.dialect.MySQL5InnoDBDialect'
+            pooled = false
+
+            dbCreate = 'create-drop' // WARNING! on production, should probably be 'update' or 'validate'
+            jndiName = 'java:comp/env/jdbc/mydb'
+        }
+    }
+}
+```
 
 More details on [RUN@cloud >> Binding services (resources) to applications](http://wiki.cloudbees.com/bin/view/RUN/Resource+Management)
 
