@@ -1,4 +1,3 @@
-
 # Grails on CloudBees
 
 Press the button to build, test and deploy this instantly:
@@ -12,10 +11,10 @@ Press the button to build, test and deploy this instantly:
 
 Instructions for a manual setup with the [CloudBees SDK](http://wiki.cloudbees.com/bin/view/RUN/BeesSDK).
 
-## Create a Tomcat6 container
+## Create a Tomcat 7 container
 
 ```
-bees app:create -a community/grails-clickstart jvmPermSize=128
+bees app:create -a community/grails-clickstart -t tomcat7 jvmPermSize=128
 ```
 
 Please not the extra `jvmPermSize` for Grails framework.
@@ -42,11 +41,13 @@ bees app:bind -a community/grails-clickstart -db community/grails-clickstart -as
 
 This binding injects in the container:
 
+* A JNDI datasource `java:comp/env/jdbc/mydb`
 * System properties
   * `DATABASE_URL_MYDB` starting with `mysql:` (e.g. "mysql://ec2-x-y-z-w.compute-1.amazonaws.com:3306/grails-clickstart")
   * `DATABASE_USERNAME_MYDB`
   * `DATABASE_PASSWORD_MYDB`
-* a JNDI datasource `java:comp/env/jdbc/mydb`
+we recommend you to use the JNDI datasource.
+
 
 More details on [RUN@cloud >> Binding services (resources) to applications](http://wiki.cloudbees.com/bin/view/RUN/Resource+Management)
 
